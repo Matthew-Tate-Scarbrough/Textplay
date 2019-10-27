@@ -19,9 +19,7 @@ This will place a symbolic link to textplay in ``/usr/local/bin/``.
 This symbolic link can be removed with ``make uninstall``.
 
 Textplay was built using Mac OS 10.10 and Ruby 2.0.
-I have only tested it in this environment,
-if you want to run Textplay in another environment (such as Windows)
-you may have to modify the code.
+Oliver Taylor had only tested it in this environment; I have tested it in Linux, and it seems to work quite well
 
 Using textplay
 --------------
@@ -42,11 +40,16 @@ thus it always reads from STDIN and writes to STDOUT.
 To make a file use standard Unix redirection. For example::
 
     textplay < screenplay.fountain > screenplay.html
+    textplay -f < screenplay.fountain > screenplay.fdx
 
 As another example, textplay has been tested extensively with `PrinceXML`_.
 To make a PDF from a fountain document, use this::
 
     textplay < screenplay.fountain | prince - -o screenplay.pdf
+
+NOTE: that for both of these examples, the greater than and less than symbols are not stand-ins, but are part of the text. e.g.::
+
+    textplay -f < toomuch_final.fountain > toomuch.fdx
 
 Configuring textplay
 --------------------
