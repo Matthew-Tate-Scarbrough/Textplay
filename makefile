@@ -1,5 +1,9 @@
+PREFIX = /usr/local
+
 install: textplay
-	ln -s $(PWD)/textplay /usr/local/bin/
+	mkdir -p $(DESTDIR)$(PREFIX)/bin
+	cp -f textplay $(DESTDIR)$(PREFIX)/bin
+	chmod 775 $(DESTDIR)$(PREFIX)/bin/textplay
 
 uninstall: textplay
-	rm /usr/local/bin/textplay
+	rm -f $(DESTDIR)$(PREFIX)/bin/textplay
