@@ -104,6 +104,7 @@ Support for the Fountain Format
 
   -  Title Pages.
   -  Scene Numbers.
+    -   In fact, if you do add scene numbers, they will appear next to the scene as #1#, #2#, etc.
   -  Empty lines in dialogue-blocks.
 
 .. _Fountain: http://fountain.io
